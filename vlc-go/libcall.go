@@ -3,5 +3,6 @@ packet main
 import "syscall"
 
 func main() {
-    libvlc := syscall.NewLazy
+    libvlc, _ := syscall.LoadLibrary("libvlc.dylib")
+    
 }
