@@ -16,10 +16,12 @@ public class JnaVlc {
         LibvlcLibrary libvlc = (LibvlcLibrary) Native.loadLibrary("libvlc", LibvlcLibrary.class);
         System.out.println(libvlc.libvlc_get_version());
         
-        PointerByReference inst = libvlc.libvlc_new(1, new String[] { "-vvv", "--plugin-path=D:/tool/vlc/vlc-3.0.0-x86/plugins" });
+        //PointerByReference inst = libvlc.libvlc_new(1, new String[] { "-vvv", "--plugin-path=D:/tool/vlc/vlc-3.0.0-x86/plugins" });
+        PointerByReference inst = libvlc.libvlc_new(1, new String[] { "-vvv", "--plugin-path=/Users/min/Applications/VLC 3.0.0.app/Contents/MacOS/plugins" });
+        
         //String file = "file:///D:/workspace/isa/12.1 ISA Features with Michael Hoglan.wmv";
         //String file = "file:///E:/repo/vlcj-test/opus.sdp";
-        String file = "rtp://@:1234";
+        String file = "file:///Users/min/Downloads/大五班民族舞表演.MOV";
         PointerByReference m = libvlc.libvlc_media_new_location(inst, file);
         
         PointerByReference mp = libvlc.libvlc_media_player_new_from_media (m);
