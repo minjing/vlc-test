@@ -1,0 +1,23 @@
+o=LucentFS5000 325159889 325159889 IN IP6 2001:4888:202:ff45:a0:113:0:66
+c=IN IP6 2600:100c:8221:2fad:ce3:4eb6:9c4e:e662
+t=0 0
+m=audio 56012 RTP/AVP 104 110 105 102 108 100
+c=IN IP6 2600:100c:8221:2fad::25:4a9f:b801
+b=AS:38
+b=RS:0
+b=RR:0
+a=rtpmap:104 AMR-WB/16000/1
+a=fmtp:104 mode-set=2
+a=rtpmap:110 AMR-WB/16000/1
+a=fmtp:110 mode-set=2; octet-align=1
+a=rtpmap:105 telephone-event/16000
+a=fmtp:105 0-15
+a=rtpmap:102 AMR/8000/1
+a=fmtp:102 mode-set=7
+a=rtpmap:108 AMR/8000/1
+a=fmtp:108 mode-set=7; octet-align=1
+a=rtpmap:100 telephone-event/8000
+a=fmtp:100 0-15
+a=sendrecv
+a=ptime:20
+a=maxptime:240
