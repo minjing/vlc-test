@@ -1,0 +1,13 @@
+c=IN IP6 2600:100c:8228:3e4a:0:13:70d3:ad01
+m=audio 10180 RTP/AVP 104 100
+a=rtpmap:104 AMR-WB/16000
+a=fmtp:104 mode-set=2
+a=rtpmap:100 telephone-event/8000
+a=fmtp:100 0-15
+a=mid:65535
+a=sendrecv
+m=video 15150 RTP/AVP 117
+a=rtpmap:117 H264/90000
+a=fmtp:117 profile-level-id=42000B; packetization-mode=1; sprop-parameter-sets=Z0IAC+kHhTI=,aM4C/IA=
+a=mid:65535
+a=sendrecv

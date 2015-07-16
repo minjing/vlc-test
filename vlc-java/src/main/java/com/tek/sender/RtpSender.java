@@ -13,10 +13,10 @@ public class RtpSender {
     public static void main(String[] args) throws Exception {
         DatagramSocket client = new DatagramSocket();
         InetAddress addr = InetAddress.getByName("127.0.0.1");
-        int port = 46688;
+        int port = 10210;
         
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(
-                new File("E:/repo/vlc-test/vlc-java/rtpPkts.dat"))));
+                new File("E:/repo/vlc-test/vlc-java/amr_1301.dat"))));
         String line = reader.readLine();
         int idx = 0;
         while(line != null) {
@@ -29,7 +29,7 @@ public class RtpSender {
             DatagramPacket pkt = new DatagramPacket(bytes, bytes.length, addr, port);
             client.send(pkt);
             System.out.println("Send packate - " + idx + ", size - " + bytes.length);
-            Thread.sleep(20);
+            Thread.sleep(10);
             line = reader.readLine();
         }
         reader.close();
