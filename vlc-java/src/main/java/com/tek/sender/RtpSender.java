@@ -14,9 +14,9 @@ public class RtpSender {
         DatagramSocket client = new DatagramSocket();
         InetAddress addr = InetAddress.getByName("127.0.0.1");
         int port = 10210;
-        
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(
-                new File("E:/repo/vlc-test/vlc-java/amr_1301.dat"))));
+        new File("E:/repo/vlc-test/vlc-java/amr_1301.dat"))));
         String line = reader.readLine();
         int idx = 0;
         while(line != null) {
@@ -35,7 +35,7 @@ public class RtpSender {
         reader.close();
         client.close();
     }
-    
+
     private static byte convertByte(String hexStr) {
         if (hexStr == null || hexStr.length() != 2) {
             throw new IllegalArgumentException("The hex string " + hexStr + " can't be converted to byte");
